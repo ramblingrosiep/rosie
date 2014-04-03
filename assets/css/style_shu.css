@@ -1,0 +1,58 @@
+/* welcome page etc. */
+.contentBody {
+	margin-top: 2em;
+	padding:25px;
+	width:auto;
+	border-radius:10px; /* CSS3 draft*/
+	-webkit-border-radius:10px; /* Safari,Google Chrome */
+	-moz-border-radius:10px; /* Firefox */
+}
+
+.animateTransition {
+	-webkit-transition-property:height;
+    -webkit-transition-duration:500ms;
+    -webkit-transition-timing-function:ease-out;
+
+    -moz-transition-property:height;
+    -moz-transition-duration:500ms;
+    -moz-transition-timing-function:ease-out;
+
+    transition-property:height;
+    transition-duration:500ms;
+    transition-timing-function:ease-out;
+}
+
+.contentBody.white {
+	background:#FFF;
+}
+
+
+/* baloon */
+
+div#welcomeTip {
+	position: absolute;
+	width: 500px;
+	padding:25px;
+	background: white;
+	border-radius:10px; /* CSS3 draft*/
+	-webkit-border-radius:10px; /* Safari,Google Chrome */
+	-moz-border-radius:10px; /* Firefox */
+}
+
+div#welcomeTip.arrow_top:after {
+    content: ' ';
+    width:0;
+    height: 0;
+    position:absolute;
+    border:10px solid transparent;
+    border-bottom-color:white;
+    bottom:100%;
+    left:50%;
+}
+
+div#welcomeTip.boxShadow {
+/* box-shadow */
+box-shadow:rgba(0, 0, 0, 0.227451) 0px 0px 36px 3px;
+-webkit-box-shadow:rgba(0, 0, 0, 0.227451) 0px 0px 36px 3px;
+-moz-box-shadow:rgba(0, 0, 0, 0.227451) 0px 0px 36px 3px;
+}

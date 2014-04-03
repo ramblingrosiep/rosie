@@ -1,0 +1,474 @@
+/* givling game test - css */
+@import url(http://fonts.googleapis.com/css?family=Fjalla+One);
+*{
+  margin:0;
+  padding:0;
+}
+
+html, body {
+}
+
+html {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/*body {
+margin: 0 auto;
+background: transparent url(Givling_background.png) repeat;
+}*/
+
+/* body contents */
+div#wrap{
+	height: auto;
+	margin:0 auto;
+	width:800px;
+}
+div#header {
+/*	border : gray 1px solid; put back */
+	background-color: white;
+	height: 80px;
+	line-height: 0px;
+	margin-bottom: 0;
+	width: 800px; 
+	text-align: left;
+}
+
+div#header.gameHeader {
+	text-align: center;
+}
+
+div#header img#regularHeader_logo {margin-top: 17px;float: left;}
+div#header img#gameHeader_logo {margin-top: 20px;}
+
+div#header_bottom{ /* bug:  there is a gap on iOS devices depending on zoom rates */
+	background: transparent url(../images/Givling_wave.png) repeat-x;
+	height: 18px;
+
+	line-height: 0px;
+	margin-top: 0;
+}
+
+div#content {
+	overflow:visible
+	min-height: 100%;
+}
+
+div#content textarea {
+	width: 100%;
+}
+
+
+div#footer {
+	overflow: visible;
+	margin:0 auto;
+	position: relative;
+	width: 100%;
+	min-height: 280px;/* changed from 280 */
+	background: transparent url(../images/Givling_footer_plants.png) center 33px no-repeat;
+}
+
+#container_footer_notice {
+	position: absolute;
+    bottom: 15px;
+    text-align: center;
+    width: 100%;
+    font-family: 'Balthazar', serif;
+    -webkit-font-smoothing: antialiased; /* google chrome antialiasing workaround*/
+    color: #655f54;
+}
+
+.extendedBackground {
+	margin-left: -500%;
+    margin-right: -500%;
+    padding-left: 500%;
+    padding-right: 500%;
+}
+
+
+/* widgets  elements */
+
+h1 {
+	font-family: 'Balthazar', serif;
+	-webkit-font-smoothing: antialiased; /* google chrome antialiasing workaround*/
+	margin-bottom: 0.7em;
+}
+
+h2 {
+	font-family: 'Balthazar', serif;
+	-webkit-font-smoothing: antialiased; /* google chrome antialiasing workaround*/
+	margin-bottom: 0.7em;
+}
+
+h3 {
+	font-family: 'Balthazar', serif;
+	-webkit-font-smoothing: antialiased; /* google chrome antialiasing workaround*/
+	margin-bottom: 0.7em;
+}
+
+p {
+	font-family: 'Source Sans Pro', sans-serif;
+	-webkit-font-smoothing: antialiased; /* google chrome antialiasing workaround*/
+}
+
+a {
+	text-decoration: none;
+	color: #bb3232;
+}
+
+
+
+/* utilities */
+.noSelect {
+	user-select: none; /* CSS3 */
+	-moz-user-select: none; /* Firefox */
+	-webkit-user-select: none; /* Safari Chrome */
+	-ms-user-select: none; /* IE10 */
+}
+
+/* input text */
+input[type=text],input[type=password] {
+   border-radius: 5px;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   -o-border-radius: 5px;
+   -ms-border-radius: 5px;
+   border:#a9a9a9 1px solid;
+   -moz-box-shadow: inset 0 0 5px rgba(0,0,0,0.2),0 0 2px rgba(0,0,0,0.3);
+   -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2),0 0 2px rgba(0,0,0,0.3);
+   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2),0 0 2px rgba(0,0,0,0.3);
+   /* width:200px; */
+   height:28px;
+   padding:0 3px;
+   
+   line-height: 0.8em;
+   
+   font-family: 'Balthazar', serif;
+   -webkit-font-smoothing: antialiased; /* google chrome antialiasing workaround*/
+   font-size: 1em;
+   color: #5b5b5b;
+   
+   vertical-align:middle;
+}
+ 
+input[type=text]:focus,input[type=password]:focus {
+   border:solid 1px #a1781f;
+}
+ 
+input[type=text],input[type=password]:focus, select { 
+   outline: none;
+}
+
+/* input text / password width */
+input[type=text].wider ,input[type=password].wider {
+	width:450px;
+}
+
+input[type=text].wide ,input[type=password].wide {
+	width:200px;
+}
+
+input[type=text].medium_width ,input[type=password].medium_width {
+	width:150px;
+}
+
+input[type=text].narrow ,input[type=password].narrow {
+	width:80px;
+}
+
+/* input text boder color */
+input[type=text].error,input[type=password].error {
+	border:red 1px solid;
+}
+
+/*default text */
+input[type=text].defaultText { }
+input[type=text].defaultTextActive { color: #c4bdbd; font-style: italic; }
+
+/* button */
+
+
+button.round {
+/*	display: inline-block;*/
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border:#a9a9a9 1px solid;
+	-moz-box-shadow: inset 0 0 5px rgba(0,0,0,0.2),0 0 2px rgba(0,0,0,0.3);
+	-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2),0 0 2px rgba(0,0,0,0.3);
+	box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2),0 0 2px rgba(0,0,0,0.3);
+	height:32px;
+	padding:0 3px;
+	cursor:pointer;
+	font-family: 'Balthazar', serif;
+	-webkit-font-smoothing: antialiased; /* google chrome antialiasing workaround*/
+	color:white;
+	text-shadow:1px 1px 0px #6d6d6d;
+	
+	text-align: center;
+}
+
+button.more_round {
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-o-border-radius: 8px;
+	-ms-border-radius: 8px;
+	border:#a9a9a9 1px solid;
+	-moz-box-shadow: inset 0 0 8px rgba(0,0,0,0.2),0 0 2px rgba(0,0,0,0.3);
+	-webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2),0 0 2px rgba(0,0,0,0.3);
+	box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2),0 0 2px rgba(0,0,0,0.3);
+	height:32px;
+	padding:0 3px;
+	cursor:pointer;
+	
+	
+	font-family: 'Balthazar', serif;
+	-webkit-font-smoothing: antialiased; /* google chrome antialiasing workaround*/
+	color:white;
+	text-shadow:1px 1px 0px #6d6d6d;
+	
+	vertical-align:middle;
+}
+
+/* button width */
+button.wider {
+	width:400px;
+}
+
+button.wide {
+	width:200px;
+}
+
+button.medium_width {
+	width:150px;
+}
+
+
+button.narrow {
+	width:80px;
+}
+
+/* button height */
+
+button.tall {
+	height:64px;
+}
+
+button.medium_height {
+	height:32px;
+}
+
+button.short {
+	height:16px;
+}
+
+button.green {
+	background:#5e9c23;
+}
+
+button.green:hover {
+	background:#7eba24;
+}
+
+button.greenactive {
+	background:#65ac24;
+}
+
+
+button.orange {
+	background:#e16512;
+}
+
+button.orange:hover {
+	background:#ea823c;
+}
+
+button.orange:active {
+	background:#ba6022;
+}
+
+/* purple */
+
+button.aligned {
+	padding-left: 40%;
+}
+button.purple {
+	background:#6c2e54;
+}
+
+button.purple:hover {
+	background:#532340;
+}
+
+button.purple:active {
+	background:#a45686;
+}
+
+/* disabled */
+
+button.round[disabled] {
+	background: #cbc8c8;
+}
+
+button.round[disabled]:hover {
+	background: #cbc8c8;
+}
+
+button.round[disabled]:active {
+	background: #cbc8c8;
+}
+/* userAccess for signup , login etc . */
+
+div#userAccess {
+	width: 60%;
+	height: 100%;
+	float: right;
+	overflow: hidden;
+	line-height: normal;
+}
+
+#widget_userInfo {
+	border: red 1px solid;
+	height: 100%;
+}
+
+/* widget generic styles */
+.color_orange {
+	color:#e16512;
+}
+
+.color_green {
+	color : #5e9c23;
+}
+
+/* font size */
+.bigger_font {
+	font-size: 3em;
+}
+
+.large_size_font {
+	font-size: 2em;
+}
+
+.medium_size_font {
+	font-size: 1.5em; /* was 1.2 */
+}
+
+.small_size_font {
+	font-size: 1em;
+}
+
+/* margin */
+
+.margin_top_medium {
+	margin-top: 1em;
+}
+
+.margin_top_short {
+	margin-top: 0.5em;
+}
+
+.float_right {
+	float: right;
+}
+
+.float_left {
+	float: left;
+}
+
+/* widget specific styles */
+
+#gameHeader_logo, #regularHeader_logo {
+	cursor: pointer;
+}
+
+div#userLogin {
+/* 	border: red 1px solid; put back */
+	margin-top: 1em;
+	text-align: right;
+}
+
+/* p.form_message */
+p.form_message {
+	margin-bottom: 0.8em;
+}
+/* RP CHANGE */
+p.userLogin_signupLink {
+	font-family: 'Gill Sans', Sans-serif;
+	font-size: 0.9em;
+	margin-top: 0.5em;
+}
+
+/* front page - home.landing */
+div#threePoints_div {
+	display:table;
+	width:800px;
+	position: absolute;
+	padding-top: 112px;
+	
+	/* font text */
+	text-align: center;
+	font-family: 'Balthazar', serif;
+	-webkit-font-smoothing: antialiased; /* google chrome antialiasing workaround*/
+}
+
+ul#threePoints {
+	display:table-row;
+}
+
+ul#threePoints li {
+	display:table-cell;
+	text-align:center;
+	width: 266px;
+}
+#fund {
+	
+}
+
+#play {
+padding-right: 111px;
+padding-left:126px
+
+}
+
+#win {
+
+}
+
+#threePoints h2 {
+	color: white;
+	text-shadow:1px 1px 1px #111111;
+	line-height: 1.1em;
+	/*font-size:40px;*/
+	font-size: 50px;
+}
+
+#threePoints p {
+	color: white;
+	text-shadow:1px 1px 1px #111111;
+}
+
+/* SNS icons in the footer */
+div.sns_twitter {
+	margin-left: 0.3em;
+	height: 18px;
+	width: 18px;
+	background: transparent url(twitter.png) left top no-repeat;
+	display: inline-block;
+	margin-bottom: -2px;
+	
+	cursor: pointer;
+}
+
+div.sns_facebook {
+	margin-left: 0.3em;
+	height: 18px;
+	width: 18px;
+	background: transparent url(facebook.png) left top no-repeat;
+	display: inline-block;
+	margin-bottom: -2px;
+	cursor: pointer;
+}
